@@ -1,4 +1,4 @@
-function insertionSort (items) {
+function insertionSort(items) {
   // Loop through each element
 
   // store the current item value so it can be placed correctly
@@ -14,6 +14,25 @@ function insertionSort (items) {
   // We can now insert the item in its sorted location
 
   // Remember to return the list!
+  let swapped= false
+  do {
+    swapped=false;
+    for (let i = 0; i < items.length; i++) {
+      swapped=false;
+      const item = items[i];
+
+        if(items[i] > items[i+1] )
+        {
+          items[i]= items[i+1]
+          items[i+1]=item
+          swapped=true
+          break;
+        }
+      
+      
+    }
+  } while (swapped);
+
   return items;
 }
 
